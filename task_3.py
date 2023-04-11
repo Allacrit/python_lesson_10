@@ -9,3 +9,10 @@
 --- обязательно!!! усложните задачу, "отловив" исключение,
 придумайте как это сделать
 """
+my_list = ['attribute', 'класс', 'функция', 'type']
+
+for el in my_list:
+    try:
+        print(bytes(el, 'ascii'))
+    except UnicodeEncodeError:
+        print(f'Элемент "{el}" невозможно записать в байтовом типе')
